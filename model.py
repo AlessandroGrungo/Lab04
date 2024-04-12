@@ -1,6 +1,10 @@
 import dictionary as d
 import richWord as rw
 
+# Model (Modello): Questo componente rappresenta i dati e la logica di business dell'applicazione.
+# Il modello gestisce lo stato dell'applicazione e implementa le operazioni per modificarlo.
+# È indipendente dalla vista e dal controller.
+
 class MultiDictionary:
 
     def __init__(self):
@@ -11,16 +15,6 @@ class MultiDictionary:
         self._english.loadDictionary("resources/English.txt")
         self._italian.loadDictionary("resources/Italian.txt")
         self._spanish.loadDictionary("resources/Spanish.txt")
-
-    def printDic(self, language):
-        if language == "english":
-            self._english.printAll()
-        elif language == "italian":
-            self._italian.printAll()
-        elif language == "spanish":
-            self._spanish.printAll()
-        else:
-            print("Language not supported")
 
     def searchWord(self, words, language):
         # words is a list of strings
